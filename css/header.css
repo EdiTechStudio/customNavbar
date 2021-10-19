@@ -86,9 +86,6 @@ header ul .btn span {
   border-radius: 5px;
   cursor: pointer;
 }
-header ul .btn:hover span::before {
-  content: "\f00d";
-}
 @media screen and (max-width: 1050px) {
   header {
     padding: 10px 40px 10px 0;
@@ -121,5 +118,12 @@ header ul .btn:hover span::before {
     text-align: center;
     line-height: 30px;
     margin: 30px 0;
+  }   
+  /* We want the navabar to be hidden by the css at this width */
+  /* The whole logic of this things works like  */
+  /* Css otside the HTML has lower preference than inline css */
+  /* Here we use javascript to toggle class names & to toggle visibility of navbar 😉 */
+  #toggleItems{ 
+    display: none; 
   }
 }
